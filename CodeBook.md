@@ -34,6 +34,7 @@ CodeBook
 ## Code book
 
 The output set - *features_avg_by_sub_and_activity.txt* file contains the following columns
+
 1. subject - integer, id of person associated with a measurements
 2. activity_name - string, labels with their activity name. Available values:
   - WALKING
