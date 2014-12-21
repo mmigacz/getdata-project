@@ -36,6 +36,7 @@ activityLabels <- function() {
   read.csv("./data/UCI HAR Dataset/activity_labels.txt", header=FALSE ,sep="", col.names=c("activity_code", "activity_name"))
 }
 
+# The main function of the project. Run the whole analysis.
 run_analysis <- function() {
   # Requires dplyr package
   suppressMessages(library(dplyr))
@@ -71,5 +72,6 @@ run_analysis <- function() {
   t_summary <- t_tmp %>% group_by(subject, activity_name) %>% summarise_each(funs(mean))
   
   # Saves summary result
-  write.table(t_joined4, "./data/features_avg_by_sub_and_activity.txt",  row.names=FALSE)
+  write.table(t_summary, "./data/features_avg_by_sub_and_activity.txt",  row.names=FALSE)
+  t_summary
 }
