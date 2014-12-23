@@ -56,7 +56,7 @@ run_analysis <- function() {
   hf <- c(TRUE, TRUE, h$fFilter)
  
   # 2. Extracts only the measurements on the mean and standard deviation for each measurement.
-  mms <- ms[,hf]
+  mms <- m[,hf]
  
   # 4. Appropriately labels the data set with descriptive variable names.
   names(mms) <- hn
